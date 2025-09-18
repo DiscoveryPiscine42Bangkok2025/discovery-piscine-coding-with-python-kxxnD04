@@ -32,6 +32,7 @@ def find_king(board):
     return None
 
 def checkmate(board: str):
+    king_count = board.count('K')
     board = [list(row.strip()) for row in board.splitlines()]
     rows = len(board)
 
@@ -43,6 +44,9 @@ def checkmate(board: str):
     if not king_pos:
         return "Error: No King on the board."
     
+    if king_count > 1:
+        return "Error: More than one King on the board."
+
     enemy_pieces = ['R', 'B', 'Q', 'P']
     is_found = 0
     for i in range(rows):
