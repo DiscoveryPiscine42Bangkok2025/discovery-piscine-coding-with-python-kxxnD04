@@ -1,5 +1,5 @@
 import sys
-from checkmate_bonus import *
+from checkmate import *
 
 def main():
     if len(sys.argv) < 2:
