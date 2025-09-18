@@ -29,6 +29,7 @@ def find_king(board):
     return None
 
 def checkmate(board: str):
+    king_count = board.count('K')
     board = [list(row.strip()) for row in board.splitlines()]
     rows = len(board)
 
@@ -36,9 +37,12 @@ def checkmate(board: str):
         if len(board[r]) != rows:
             return "Error: The board is not a square."
 
-    king_pos = find_king(board)
+    king_pos = find_king(board) # tuple (x, y)
     if not king_pos:
         return "Error: No King on the board."
+    
+    if king_count > 1:
+        return "Error: More than one King on the board."
 
     enemy_pieces = ['R', 'B', 'Q', 'P']
     attacked = set()
