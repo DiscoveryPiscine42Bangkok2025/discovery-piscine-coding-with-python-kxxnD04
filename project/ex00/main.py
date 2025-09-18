@@ -41,10 +41,10 @@ def main():
     ..P.
     ..K.\
     """
-    checkmate(board1)
-    checkmate(board2)
-    checkmate(board3)
-    checkmate(board4)
-    checkmate(board5)
+    print(checkmate(board1))
+    print(checkmate(board2))
+    print(checkmate(board3))
+    print(checkmate(board4))
+    print(checkmate(board5))
 if __name__ == "__main__":
     main()

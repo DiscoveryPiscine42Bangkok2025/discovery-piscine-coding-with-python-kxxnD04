@@ -67,5 +67,5 @@ def checkmate(board: str):
                         is_found += 1
 
     if is_found > 0:
-        return print("Success")
-    return print("Fail")
+        return "Success"
+    return "Fail"
